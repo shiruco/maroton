@@ -11,7 +11,7 @@ import configureStore from './store/configureStore';
 import Base from './containers/Base'
 
 
-import style from '../scss/main.css.scss'
+import style from '../scss/(u@w@u).css.scss'
 
 let store = configureStore()
 

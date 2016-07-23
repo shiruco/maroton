@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
 
-class Moga extends Component {
+class Job extends Component {
   constructor(props) {
     super(props)
   }
@@ -87,4 +87,4 @@ class Moga extends Component {
   }
 }
 
-export default connect()(Moga)
+export default connect()(Job)

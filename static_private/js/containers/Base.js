@@ -3,7 +3,6 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import Header from '../components/Header'
 import Canvas from '../components/Canvas'
-import Menu from './Menu'
 
 @connect(state => ({
     routerState: state.routing,
@@ -20,7 +19,7 @@ class Base extends Component {
       <div>
         <Header />
         <Canvas />
-        <div className="menu">
+        <div className="contents">
           <div>
             {this.props.children}
           </div>

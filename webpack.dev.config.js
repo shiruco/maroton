@@ -5,11 +5,11 @@ var precss = require('precss')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
-  devtool: 'cheap-module-source-map',
+  devtool: 'source-map',
   entry: [
     'webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr',
     'webpack/hot/only-dev-server',
-    './static_private/js/app'
+    './static_private/js/app',
   ],
   output: {
     path: path.join(__dirname, 'static'),
@@ -17,16 +17,8 @@ module.exports = {
     publicPath: 'http://localhost:3000/static/'
   },
   plugins: [
-    // new webpack.optimize.DedupePlugin(),
-    // new webpack.optimize.UglifyJsPlugin({
-    //   compress: {
-    //     warnings: false
-    //   }
-    // }),
-    //new webpack.optimize.AggressiveMergingPlugin(),
-    //new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new ExtractTextPlugin('css/main.css')
+    new ExtractTextPlugin('(u@w@u).css')
   ],
   module: {
     loaders: [
@@ -39,6 +31,10 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style-loader', ['css-loader', 'postcss-loader', 'sass-loader'])
+      },
+      {
+        test: /\.(jpg|png)$/,
+        loader: 'url-loader'
       }
     ]
   },

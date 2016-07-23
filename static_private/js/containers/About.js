@@ -2,16 +2,16 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
 
-class Piyo extends Component {
+class About extends Component {
   constructor(props) {
     super(props)
   }
 
   render() {
     return (
-      <div>piyo</div>
+      <div>About</div>
     )
   }
 }
 
-export default connect()(Piyo)
+export default connect()(About)
