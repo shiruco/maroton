@@ -1,7 +1,7 @@
-const Canvas = $(function(){
+const CanvasLogic = $(function(){
   let containerElm = $('#canvasWrapper');
   let canvasElm = $('#canvas');
-  let contentsElm = $('.contents');
+  let contentsElm = $('#contents');
 
   // 2Dのコンテキストを取り出す
   			var canvas = document.getElementById('canvas');
@@ -25,4 +25,4 @@ const Canvas = $(function(){
   });
 })
 
-export default Canvas
+export default CanvasLogic

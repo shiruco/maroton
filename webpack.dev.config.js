@@ -9,7 +9,7 @@ module.exports = {
   entry: [
     'webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr',
     'webpack/hot/only-dev-server',
-    './static_private/js/app',
+    './static_private/src/app',
   ],
   output: {
     path: path.join(__dirname, 'static'),
@@ -18,7 +18,7 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new ExtractTextPlugin('(u@w@u).css')
+    new ExtractTextPlugin('(u@w@u).css',{ allChunks: true })
   ],
   module: {
     loaders: [
@@ -29,8 +29,8 @@ module.exports = {
         include: __dirname
       },
       {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style-loader', ['css-loader', 'postcss-loader', 'sass-loader'])
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader')
       },
       {
         test: /\.(jpg|png)$/,
@@ -46,8 +46,5 @@ module.exports = {
         }),
       precss
     ];
-  },
-  sassLoader: {
-    includePaths: [path.join(__dirname, 'scss')]
   }
 }

@@ -1,13 +1,13 @@
 @charset "utf-8";
 
-.mes {
+.headerMessage {
   font-size: 50px;
   position: relative;
   top: 60vh;
   margin-left: 10px;
 }
 
-.c01 {
+.contentBlock {
   position: relative;
   top: 100vh;
   width: 100%;
@@ -16,13 +16,13 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .mes {
+  .headerMessage {
     font-size: 35px;
     margin-left: 10px;
   }
 }
 @media only screen and (max-width: 480px) {
-  .mes {
+  .headerMessage {
     font-size: 22px;
     margin-left: 5px;
   }

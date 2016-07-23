@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { addTodo } from '../actions'
+import { addTodo } from '../../actions'
 
 class About extends Component {
   constructor(props) {

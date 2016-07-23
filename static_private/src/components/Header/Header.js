@@ -1,8 +1,11 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router';
 import { connect } from 'react-redux'
-import { addTodo } from '../actions'
-import logoImg from '../../images/logo.png'
+import { addTodo } from '../../actions'
+import logoImg from '../../../images/logo.png'
+
+import styles from './Header.css'
+import helperStyles from '../../Helper.css'
 
 class Header extends Component {
   constructor(props) {
@@ -11,13 +14,16 @@ class Header extends Component {
 
   render() {
     let lists = ['top','about','job']
+
+    let headerClass = styles.header + ' ' + styles.fixed + ' ' + helperStyles.dfl;
+
     return (
-      <header className="header fixed d-fl">
-        <div className="logo">
-          <img src={logoImg} width={100} />
+      <header className={headerClass}>
+        <div className={styles.logo}>
+          <img src={logoImg} width={130} />
         </div>
-        <div className="menu">
-          <ul className="d-fl">
+        <div className={styles.menu}>
+          <ul className={helperStyles.dfl}>
             {lists.map( item => 
               <li key={item}><Link to={item}>{item}</Link></li>
             )}

@@ -8,10 +8,8 @@ import router from './router'
 import { Router, Route, IndexRoute, Link, IndexLink, hashHistory, browserHistory } from 'react-router'
 import { syncHistoryWithStore } from 'react-router-redux';
 import configureStore from './store/configureStore';
-import Base from './containers/Base'
 
-
-import style from '../scss/(u@w@u).css.scss'
+import styles from './Reset.css'
 
 let store = configureStore()
 

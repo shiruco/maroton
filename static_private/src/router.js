@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
-import Base from './containers/Base';
-import Top from './containers/Top';
-import About from './containers/About';
-import Job from './containers/Job';
+import Base from './containers/Base/Base';
+import Top from './containers/Top/Top';
+import About from './containers/About/About';
+import Job from './containers/Job/Job';
 
 export default (
   <Route path="/" component={Base}>

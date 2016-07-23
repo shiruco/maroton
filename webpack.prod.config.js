@@ -6,7 +6,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   entry: [
-    './static_private/js/app',
+    './static_private/src/app',
   ],
   output: {
     path: path.join(__dirname, 'static'),
@@ -34,8 +34,8 @@ module.exports = {
         include: __dirname
       },
       {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style-loader', ['css-loader', 'postcss-loader', 'sass-loader'])
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader')
       },
       {
         test: /\.(jpg|png)$/,
@@ -51,8 +51,5 @@ module.exports = {
         }),
       precss
     ];
-  },
-  sassLoader: {
-    includePaths: [path.join(__dirname, 'scss')]
   }
 }

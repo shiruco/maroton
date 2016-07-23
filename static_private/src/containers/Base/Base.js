@@ -1,8 +1,9 @@
 import React, { Component, PropTypes } from 'react'
-//import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux'
-import Header from '../components/Header'
-import Canvas from '../components/Canvas'
+import Header from '../../components/Header/Header'
+import Canvas from '../../components/Canvas/Canvas'
+
+import styles from './Base.css'
 
 @connect(state => ({
     routerState: state.routing,
@@ -19,7 +20,7 @@ class Base extends Component {
       <div>
         <Header />
         <Canvas />
-        <div className="contents">
+        <div id="contents" className={styles.contents}>
           <div>
             {this.props.children}
           </div>
