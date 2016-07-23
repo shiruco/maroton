@@ -1,0 +1,8 @@
+box: node:latest
+
+build:
+  steps:
+    # - npm-install
+    # - script:
+    #     name: build static
+    #     code: npm run build
