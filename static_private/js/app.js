@@ -4,13 +4,12 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import todoApp from './reducers'
-import App from './components/App' 
 import router from './router' 
 import { Router, Route, IndexRoute, Link, IndexLink, hashHistory, browserHistory } from 'react-router'
 import { syncHistoryWithStore } from 'react-router-redux';
 import configureStore from './store/configureStore';
 import Base from './containers/Base'
-import './canvas/Canvas'
+
 
 import style from '../scss/main.css.scss'
 

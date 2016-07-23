@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 //import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux'
+import Header from '../components/Header'
+import Canvas from '../components/Canvas'
 import Menu from './Menu'
 
 @connect(state => ({
@@ -16,9 +18,12 @@ class Base extends Component {
   render() {
     return (
       <div>
-      	<Menu />
-        <div>
-          {this.props.children}
+        <Header />
+        <Canvas />
+        <div className="menu">
+          <div>
+            {this.props.children}
+          </div>
         </div>
       </div>
     )
