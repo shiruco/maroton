@@ -25,7 +25,7 @@ class Header extends Component {
         <div className={styles.menu}>
           <ul className={helperStyles.dfl}>
             {lists.map( item => 
-              <li key={item}><Link to={item}>{item}</Link></li>
+              <li className={styles.menuList} key={item}><Link to={item}>{item}</Link></li>
             )}
           </ul>
         </div>

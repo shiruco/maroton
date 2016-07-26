@@ -5,7 +5,7 @@ import styles from './Canvas.css'
 
 const Canvas = () => (
   <div id="canvasWrapper" className={styles.canvasWrapper}>
-    <canvas id="canvas"></canvas>
+    <canvas id="canvas" resize="true"></canvas>
   </div>
 )
 

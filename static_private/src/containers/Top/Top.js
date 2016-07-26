@@ -6,14 +6,19 @@ import { addTodo } from '../../actions'
 class Top extends Component {
   render() {
     return (
-      <section>
+      <div>
         <div className={styles.headerMessage}>
           Modern_Application_Design
+          <div className={styles.headerSubMessage}>
+            <p>marotonはwebアプリケーションの実装を得意としています。</p>
+            <p>marotonはwebアプリケーションの実装を得意としています。</p>
+            <p>marotonはwebアプリケーションの実装を得意としています。</p>
+          </div>
         </div>
         <div className={styles.contentBlock}>
           
         </div>
-      </section>
+      </div>
     )
   }
 }

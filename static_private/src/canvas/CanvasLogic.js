@@ -3,12 +3,12 @@ const CanvasLogic = $(function(){
   let canvasElm = $('#canvas');
   let contentsElm = $('#contents');
 
-  // 2Dのコンテキストを取り出す
-  			var canvas = document.getElementById('canvas');
-            var ctx = canvas.getContext('2d');
-            // 指定の色で範囲内を塗りつぶす
-            ctx.fillStyle = 'rgb(130,120,220)';
-            ctx.fillRect(0, 0, $( window ).width(), $( window ).height());
+  // // 2Dのコンテキストを取り出す
+  // 			var canvas = document.getElementById('canvas');
+  //           var ctx = canvas.getContext('2d');
+  //           // 指定の色で範囲内を塗りつぶす
+  //           ctx.fillStyle = 'rgb(100,100,100)';
+  //           ctx.fillRect(0, 0, $( window ).width(), $( window ).height());
 
   function resizeCanvas(){
     canvasElm.outerWidth(containerElm.width());

@@ -2,7 +2,7 @@
 
 body {
   background-color: #000;
-  font-family:Verdana, "ＭＳ Ｐゴシック", sans-serif;
+  font-family:HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue","Open Sans Local",Arial,sans-serif,"ＭＳ Ｐゴシック", sans-serif;
 }
 
 #root {
@@ -10,9 +10,12 @@ body {
   height: 100%;
 }
 
-.contents {
-  margin-top: 90px;
+.contentsWrapper {
   position: absolute;
   z-index: 1;
   color: #fff;
+}
+
+.contents {
+  
 }
