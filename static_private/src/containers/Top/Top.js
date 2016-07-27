@@ -16,7 +16,7 @@ class Top extends Component {
           </div>
         </div>
         <div className={styles.contentBlock}>
-          
+          あ
         </div>
       </div>
     )

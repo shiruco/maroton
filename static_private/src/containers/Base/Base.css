@@ -2,20 +2,20 @@
 
 body {
   background-color: #000;
-  font-family:HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue","Open Sans Local",Arial,sans-serif,"ＭＳ Ｐゴシック", sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, Meiryo, sans-serif;
+  overflow-x: hidden; 
 }
 
 #root {
-  width: 100%;
-  height: 100%;
 }
 
 .contentsWrapper {
-  position: absolute;
-  z-index: 1;
   color: #fff;
+  overflow-x: hidden;
+
+  -webkit-overflow-scrolling: touch;
 }
 
 .contents {
-  
+  overflow-x: hidden; 
 }
