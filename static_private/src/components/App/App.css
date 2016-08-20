@@ -12,7 +12,6 @@ body {
 .contentsWrapper {
   color: #fff;
   overflow-x: hidden;
-
   -webkit-overflow-scrolling: touch;
 }
 

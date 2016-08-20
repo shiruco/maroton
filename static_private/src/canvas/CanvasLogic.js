@@ -12,7 +12,7 @@ const CanvasLogic = $(function(){
 
 var Diffusion = new function() {
     
-    var PARTICLE_NUM = 200;    
+    var PARTICLE_NUM = 300;    
     var lineFlg = true;    
     var p = [];
     var canvas,ctx;
@@ -140,7 +140,6 @@ function Particle() {
 Diffusion.init();
 
 
-
   function resizeCanvas(){
     canvasElm.outerWidth(containerElm.width());
     canvasElm.outerHeight(containerElm.height() * 1.0);  //1.0は適宜変更
@@ -153,9 +152,6 @@ Diffusion.init();
 
   //$(window).on('load', initialize);
 
-  $(window).on('scroll', function() {
-    //$('header').addClass('fixed');
-  });
 })
 
 export default CanvasLogic

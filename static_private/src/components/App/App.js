@@ -1,24 +1,22 @@
 import React, { Component, PropTypes } from 'react'
-import { connect } from 'react-redux'
-import Header from '../../components/Header/Header'
-import Footer from '../../components/Footer/Footer'
-import Canvas from '../../components/Canvas/Canvas'
+import Header from '../../containers/Header/Header'
+import Footer from '../Footer/Footer'
+import Canvas from '../Canvas/Canvas'
+import Spinner from '../Spinner/Spinner'
 
-import styles from './Base.css'
+import styles from './App.css'
+import logoImg from '../../../images/logo.png'
 
-@connect(state => ({
-    routerState: state.routing,
-    currentLocation : state.routing.location
-}))
-
-class Base extends Component {
+class App extends Component {
   constructor(props) {
     super(props)
   }
 
   render() {
+    console.log("App",this.props)
     return (
       <div>
+        <Spinner />
         <Header />
         <Canvas />
         <div className={styles.contentsWrapper}>
@@ -28,9 +26,10 @@ class Base extends Component {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     )
   }
 }
 
-export default connect()(Base)
+export default App

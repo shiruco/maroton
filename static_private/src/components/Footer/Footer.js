@@ -10,10 +10,10 @@ class Footer extends Component {
   render() {
     return (
       <footer className={styles.footer}>
-        
+        Copyright &copy; 2016 maroton. All Rights Reserved.
       </footer>
     )
   }
 }
 
-export default connect()(Footer)
+export default Footer

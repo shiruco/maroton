@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router';
 import { connect } from 'react-redux'
-import { addTodo } from '../../actions'
+import { showSpinner } from '../../actions'
 import logoImg from '../../../images/logo.png'
 
 import styles from './Header.css'
@@ -13,7 +13,9 @@ class Header extends Component {
   }
 
   render() {
-    let lists = ['top','about','job']
+    const lists = ['top','about','job']
+
+    console.log(this.props)
 
     let headerClass = styles.header + ' ' + styles.fixed + ' ' + helperStyles.dfl;
 
@@ -25,7 +27,9 @@ class Header extends Component {
         <div className={styles.menu}>
           <ul className={helperStyles.dfl}>
             {lists.map( item => 
-              <li className={styles.menuList} key={item}><Link to={item}>{item}</Link></li>
+              <li className={styles.menuList} key={item}>
+                <Link onClick={() => this.props.onClickMenu()} to={item}>{item}</Link>
+              </li>
             )}
           </ul>
         </div>
@@ -34,4 +38,4 @@ class Header extends Component {
   }
 }
 
-export default connect()(Header)
+export default Header
