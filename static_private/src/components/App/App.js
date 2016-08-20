@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import Header from '../../containers/Header/Header'
 import Footer from '../Footer/Footer'
 import Canvas from '../Canvas/Canvas'
-import Spinner from '../Spinner/Spinner'
+import Spinner from '../../containers/Spinner/Spinner'
 
 import styles from './App.css'
 import logoImg from '../../../images/logo.png'
@@ -13,7 +13,6 @@ class App extends Component {
   }
 
   render() {
-    console.log("App",this.props)
     return (
       <div>
         <Spinner />

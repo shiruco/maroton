@@ -20,6 +20,10 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onClickMenu: () => {
       dispatch(showSpinner(true))
+
+      setTimeout(()=> {
+        dispatch(showSpinner(false))
+      },1000)
     }
   }
 }

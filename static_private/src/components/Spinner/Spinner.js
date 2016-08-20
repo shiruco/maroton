@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-
+import { showSpinner } from '../../actions'
 import styles from './Spinner.css'
 import helperStyles from '../../Helper.css'
 
@@ -10,13 +10,18 @@ class Spinner extends Component {
   }
 
   render() {
+    let visibleStyle
+    let isShow = this.props.isShow
+    if(isShow) {
+      visibleStyle = helperStyles.db
+    } else {
+      visibleStyle = helperStyles.dn
+    }
 
-    console.log("Spinner",this.props)
-
-    let visibleStyle = helperStyles.di
+    let spinnerClass = styles.spinner + ' ' + visibleStyle
 
     return (
-      <div className={styles.spinner,visibleStyle}></div>
+      <div className={spinnerClass}></div>
     )
   }
 }

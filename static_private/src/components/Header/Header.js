@@ -15,8 +15,6 @@ class Header extends Component {
   render() {
     const lists = ['top','about','job']
 
-    console.log(this.props)
-
     let headerClass = styles.header + ' ' + styles.fixed + ' ' + helperStyles.dfl;
 
     return (
