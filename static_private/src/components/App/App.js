@@ -15,8 +15,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Spinner />
         <Header />
+        <Spinner />
         <Canvas />
         <div className={styles.contentsWrapper}>
           <div id="contents" className={styles.contents}>
