@@ -15,9 +15,9 @@ class Spinner extends Component {
     let visibleStyle
     let isShow = this.props.isShow
     if(isShow) {
-      visibleStyle = helperStyles.db
+      visibleStyle = styles.show
     } else {
-      visibleStyle = helperStyles.dn
+      visibleStyle = styles.hide
     }
 
     let spinnerClass = styles.spinner + ' ' + visibleStyle

@@ -23,7 +23,7 @@ const mapDispatchToProps = (dispatch) => {
 
       setTimeout(()=> {
         dispatch(showSpinner(false))
-      },1000)
+      },500)
     }
   }
 }
