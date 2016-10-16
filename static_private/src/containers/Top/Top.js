@@ -9,14 +9,15 @@ let Top = ({ dispatch }) => {
       <div className={styles.headerMessage}>
         Modern_Application_Design
         <div className={styles.headerSubMessage}>
-          <p>marotonはwebアプリケーションの実装を得意としています。</p>
-          <p>marotonはwebアプリケーションの実装を得意としています。</p>
-          <p>marotonはwebアプリケーションの実装を得意としています。</p>
+          <p>Marotonはwebサービス及びスマートフォンアプリケーションの企画・制作を通じて、</p>
+          <p>人と人とのコミュニケーションをデザインしています。</p>
         </div>
       </div>
+      {/*
       <div className={styles.contentBlock}>
         あいうえお
       </div>
+      */}
     </div>
   )
 }
