@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+body {
+  background-color: #000;
+  font-family: "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, Meiryo, sans-serif;
+  overflow-x: hidden; 
+}
+
+#root {
+}
+
+.contentsWrapper {
+  color: #fff;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.contents {
+  overflow-x: hidden; 
+}
