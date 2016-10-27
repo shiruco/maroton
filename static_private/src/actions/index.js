@@ -5,3 +5,10 @@ export const showSpinner = (isShow) => {
     isShow
   }
 }
+//メニュー表示制御
+export const showMenu = (isShow) => {
+  return {
+    type: 'SHOW_MENU',
+    isShow
+  }
+}

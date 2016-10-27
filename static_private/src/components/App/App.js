@@ -3,7 +3,6 @@ import Header from '../../containers/Header/Header'
 import Footer from '../Footer/Footer'
 import Canvas from '../Canvas/Canvas'
 import Spinner from '../../containers/Spinner/Spinner'
-
 import styles from './App.css'
 import logoImg from '../../../images/logo.png'
 

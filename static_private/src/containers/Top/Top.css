@@ -14,6 +14,10 @@
   line-height: 1.3em;
 }
 
+.headerSubMessageText {
+  padding-right: 20px;
+}
+
 .contentBlock {
   position: relative;
   top: 80vh;

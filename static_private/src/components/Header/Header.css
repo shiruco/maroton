@@ -14,6 +14,13 @@
   margin: 30px 395px 0 20px;
 }
 
+.menuIcon {
+  display: none;
+  position: absolute;
+  top: 29px;
+  right: 12px;
+}
+
 .fixed {
   position: fixed;
   top: 0px;
@@ -31,10 +38,13 @@
   text-decoration: none;
 }
 .menuList a:visited,
-.menuList a:hover,
 .menuList a:active,
 .menuList a:link {
   color: #fff;
+}
+
+.menuList a:hover {
+  color: #ccc;
 }
 
 @media only screen and (max-width: 768px) {
@@ -45,6 +55,9 @@
   .menu {
     display: none;
   }
+  .menuIcon {
+    display: block;
+  }
 }
 @media only screen and (max-width: 480px) {
   .header {
@@ -53,5 +66,8 @@
   }
   .menu {
     display: none;
+  }
+  .menuIcon {
+    display: block;
   }
 }

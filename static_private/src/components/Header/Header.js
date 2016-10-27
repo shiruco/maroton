@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router';
 import { connect } from 'react-redux'
-import { showSpinner } from '../../actions'
+import MenuTip from '../../containers/MenuTip/MenuTip'
 import logoImg from '../../../images/logo.png'
-
+import menuImg from '../../../images/menu.png'
 import styles from './Header.css'
 import helperStyles from '../../Helper.css'
 
@@ -19,8 +19,14 @@ class Header extends Component {
 
     return (
       <header className={headerClass}>
+        <MenuTip />
         <div className={styles.logo}>
           <img src={logoImg} width={130} />
+        </div>
+        <div className={styles.menuIcon}>
+          <img src={menuImg} width={30} height={30} onClick={() => this.props.onClickMenuIcon(
+              !this.props.app.isShowMenu
+          )} />
         </div>
         <div className={styles.menu}>
           <ul className={helperStyles.dfl}>

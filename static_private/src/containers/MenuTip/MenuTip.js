@@ -1,18 +1,11 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import Header from '../../components/Header/Header'
-
-import { showSpinner, showMenu } from '../../actions'
-
-// @connect(state => ({
-//     appState: state.app,
-//     routerState: state.routing,
-//     currentLocation : state.routing.location
-// }))
+import MenuTip from '../../components/MenuTip/MenuTip'
+import { showSpinner } from '../../actions'
 
 const mapStateToProps = (state) => {
   return {
-    app: state.app
+    isShow: state.app.isShowMenu
   }
 }
 
@@ -24,9 +17,6 @@ const mapDispatchToProps = (dispatch) => {
       setTimeout(()=> {
         dispatch(showSpinner(false))
       },500)
-    },
-    onClickMenuIcon: (isShow) => {
-      dispatch(showMenu(isShow))
     }
   }
 }
@@ -34,4 +24,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Header)
+)(MenuTip)
