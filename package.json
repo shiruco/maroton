@@ -1,10 +1,10 @@
 {
-  "name": "shiruco.tokyo",
+  "name": "maroton.tokyo",
   "version": "0.0.1",
-  "description": "shiruco.tokyo",
+  "description": "maroton.tokyo",
   "repository": {
     "type": "git",
-    "url": "git@github.com:shiruco/shiruco.tokyo.git"
+    "url": "git@github.com:shiruco/maroton.git"
   },
   "scripts": {
     "start": "NODE_ENV=development node server.js",
@@ -37,7 +37,7 @@
     "eslint-plugin-react": "^3.5.1",
     "expect": "^1.8.0",
     "express": "^4.13.3",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "fbjs": "^0.3.2",
     "file-loader": "^0.9.0",
     "history": "^2.1.1",
@@ -64,7 +64,7 @@
     "sass-loader": "3.2.0",
     "style-loader": "0.7.0",
     "url-loader": "^0.5.7",
-    "webpack": "^1.9.11",
+    "webpack": "^2.1.0-beta.21",
     "webpack-dev-middleware": "^1.2.0",
     "webpack-hot-middleware": "^2.9.1"
   },

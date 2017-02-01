@@ -4,6 +4,18 @@ var autoprefixer = require('autoprefixer')
 var precss = require('precss')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
+var loaders = [
+  {
+    loader: 'css-loader',
+    options: {
+      modules: true
+    }
+  },
+  {
+    loader: 'postcss-loader'
+  }
+]
+
 module.exports = {
   devtool: 'source-map',
   entry: [
@@ -18,10 +30,10 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new ExtractTextPlugin('(u@w@u).css',{ allChunks: true })
+    new ExtractTextPlugin({filename: '(u@w@u).css', allChunks: true })
   ],
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         loaders: [ 'react-hot', 'babel' ],
@@ -30,7 +42,10 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader')
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader',
+          loader: loaders,
+        })
       },
       {
         test: /\.(jpg|png|gif)$/,
